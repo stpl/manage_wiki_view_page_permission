@@ -1,0 +1,22 @@
+= Manage Wiki View Page Permission
+== Install
+
+* Copy manage_wiki_view_page_permission plugin to {RAILS_APP}/plugins on your redmine path
+* Run rake redmine:plugins NAME=manage_wiki_view_page_permission RAILS_ENV=production
+
+== Uninstall
+
+* rake redmine:plugins NAME=manage_wiki_view_page_permission RAILS_ENV=production
+* rm -r plugins/manage_wiki_view_page_permission
+
+== Requirements
+
+* Redmine 2.2.4.stable and above
+
+== How to use
+
+* Need to create a role without permission "View protected pages" under wiki section and assign it to User "A"
+* Also need to create a role with permission "View protected pages" and "Protect wiki pages" under wiki section and assigned it to User "B"
+* Now user "B" can protect wiki pages by clicking on lock button and protected pages will not accessible to user "A" (will redirect to 403).
+
+This software is licensed under the terms of the GNU General Public License (GPL) v2. See COPYRIGHT and COPYING for details.
